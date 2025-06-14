@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JE Global Blog</title>
+  <style>
+    :root {
+      --main-blue: #2F5DAB;
+      --light-gray: #f4f4f4;
+      --white: #ffffff;
+      --dark-blue: #244a85;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light-gray);
+    }
+    header {
+      background-color: var(--main-blue);
+      color: var(--white);
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: var(--dark-blue);
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: var(--white);
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+    }
+    nav ul li a:hover {
+      background-color: var(--main-blue);
+      border-radius: 4px;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      background-color: var(--white);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .post {
+      margin-bottom: 20px;
+    }
+    .post h2, .post h3 {
+      color: var(--main-blue);
+    }
+    .btn {
+      background-color: var(--main-blue);
+      color: var(--white);
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: var(--dark-blue);
+    }
+    footer {
+      background-color: var(--main-blue);
+      color: var(--white);
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JE Global</h1>
+    <p>Welcome to JE Global's official blog – Insights on business, technology, and innovation.</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#home" id="nav-home">Home</a></li>
+      <li><a href="#about" id="nav-about">About</a></li>
+      <li><a href="#blog" id="nav-blog">Blog</a></li>
+      <li><a href="#contact" id="nav-contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="container" id="home">
+    <div class="post">
+      <h2>Welcome to JE Global</h2>
+      <p>Discover valuable insights on business strategies, digital transformation, and the future of global enterprises with JE Global.</p>
+      <a href="#blog" class="btn" id="btn-read-blog">Explore Our Blog</a>
+    </div>
+  </div>
+  <div class="container" id="about">
+    <h2>About JE Global</h2>
+    <p>At JE Global, we are passionate about helping businesses navigate the challenges of a rapidly changing world. Our team shares knowledge on technology, leadership, and sustainable growth.</p>
+    <a href="#contact" class="btn" id="btn-contact-me">Get in Touch</a>
+  </div>
+  <div class="container" id="blog">
+    <h2>Latest Blog Posts</h2>
+    <div class="post">
+      <h3>5 Strategies to Boost Business Productivity</h3>
+      <p>Discover practical tips to improve efficiency and performance in your organization...</p>
+      <a href="#" class="btn" id="btn-read-post1">Read More</a>
+    </div>
+    <div class="post">
+      <h3>The Future of Artificial Intelligence in Business</h3>
+      <p>Explore how AI is transforming industries and what it means for businesses globally...</p>
+      <a href="#" class="btn" id="btn-read-post2">Read More</a>
+    </div>
+    <div class="post">
+      <h3>How to Launch Your Own Blog in 2025</h3>
+      <p>A step-by-step guide for entrepreneurs and creators looking to share their voice online...</p>
+      <a href="#" class="btn" id="btn-read-post3">Read More</a>
+    </div>
+  </div>
+  <div class="container" id="contact">
+    <h2>Contact JE Global</h2>
+    <p>If you'd like to collaborate, have questions, or need consultancy, feel free to contact us.</p>
+    <button class="btn" id="btn-send-email">Send Email</button>
+  </div>
+  <footer>
+    <p>© 2025 JE Global - All rights reserved.</p>
+  </footer>
+</body>
+</html>
