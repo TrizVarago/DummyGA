@@ -1,20 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EW5PZYGPLE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EW5PZYGPLE');
-</script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JE Global - Junior Enterprises</title>
+  <title>JE Global Dummy</title>
   <style>
     :root {
       --main-blue: #2F5DAB;
@@ -33,9 +23,6 @@
       color: var(--white);
       padding: 20px 0;
       text-align: center;
-    }
-    header h1 {
-      margin: 0;
     }
     nav ul {
       list-style: none;
@@ -66,12 +53,6 @@
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .section {
-      margin-bottom: 40px;
-    }
-    .section h2, .section h3 {
-      color: var(--main-blue);
-    }
     .btn {
       background-color: var(--main-blue);
       color: var(--white);
@@ -80,7 +61,7 @@
       border-radius: 4px;
       display: inline-block;
       transition: background-color 0.3s;
-      cursor: pointer;
+      margin-right: 10px;
     }
     .btn:hover {
       background-color: var(--dark-blue);
@@ -93,143 +74,69 @@
       margin-top: 20px;
     }
   </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EW5PZYGPLE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EW5PZYGPLE');
+
+    function trackEvent(action) {
+      gtag('event', action, {
+        'event_category': 'button',
+        'event_label': action
+      });
+    }
+  </script>
 </head>
 <body>
   <header>
     <h1>JE Global</h1>
     <p>Empowering Junior Enterprises Worldwide</p>
   </header>
+
   <nav>
     <ul>
-      <li><a href="#home" id="nav-home">Home</a></li>
-      <li><a href="#about" id="nav-about">About</a></li>
-      <li><a href="#services" id="nav-services">Services</a></li>
-      <li><a href="#impact" id="nav-impact">Impact</a></li>
-      <li><a href="#contact" id="nav-contact">Contact</a></li>
+      <li><a href="#home" onclick="trackEvent('navigate_home')">Home</a></li>
+      <li><a href="#about" onclick="trackEvent('navigate_about')">About Us</a></li>
+      <li><a href="#members" onclick="trackEvent('navigate_members')">Our Members</a></li>
+      <li><a href="#recruitment" onclick="trackEvent('navigate_recruitment')">Recruitment</a></li>
+      <li><a href="#contact" onclick="trackEvent('navigate_contact')">Contacts</a></li>
     </ul>
   </nav>
 
   <div class="container" id="home">
-    <div class="section">
-      <h2>Welcome to JE Global</h2>
-      <p>Connecting and supporting Junior Enterprises around the world to drive impact and growth.</p>
-      <a href="#services" class="btn" id="btn-learn-more">Learn More</a>
-    </div>
+    <h2>Welcome to JE Global</h2>
+    <p>We connect and support Junior Enterprises worldwide.</p>
+    <button class="btn" onclick="trackEvent('click_find_out_more')">Find out more</button>
   </div>
 
   <div class="container" id="about">
-    <div class="section">
-      <h2>About Us</h2>
-      <p>JE Global is a network that empowers students through real-world consulting experiences, driving both personal and professional development while fostering entrepreneurship worldwide.</p>
-      <a href="#contact" class="btn" id="btn-about-contact">Talk to Us</a>
-    </div>
+    <h2>About Us</h2>
+    <p>JE Global empowers student-led businesses around the world through collaboration, innovation, and shared growth.</p>
   </div>
 
-  <div class="container" id="services">
-    <div class="section">
-      <h2>Our Services</h2>
-      <div class="section">
-        <h3>Consulting for Junior Enterprises</h3>
-        <p>Providing mentorship and strategic advice to enhance project delivery and organizational development.</p>
-        <a href="#" class="btn" id="btn-service-consulting">Learn More</a>
-      </div>
-      <div class="section">
-        <h3>Workshops & Trainings</h3>
-        <p>Empowering members with knowledge in leadership, project management, and innovation.</p>
-        <a href="#" class="btn" id="btn-service-workshops">Learn More</a>
-      </div>
-      <div class="section">
-        <h3>Global Networking</h3>
-        <p>Connecting Junior Enterprises across borders to share best practices and create impact globally.</p>
-        <a href="#" class="btn" id="btn-service-networking">Learn More</a>
-      </div>
-    </div>
+  <div class="container" id="members">
+    <h2>Our Members</h2>
+    <p>Meet the Junior Enterprises that are shaping the future globally.</p>
   </div>
 
-  <div class="container" id="impact">
-    <div class="section">
-      <h2>Our Impact</h2>
-      <p>Over 50,000 students engaged worldwide, generating real impact for companies, communities, and economies.</p>
-      <a href="#contact" class="btn" id="btn-see-impact">See How</a>
-    </div>
+  <div class="container" id="recruitment">
+    <h2>Recruitment</h2>
+    <p>Are you ready to start a Junior Enterprise?</p>
+    <button class="btn" onclick="trackEvent('click_found_a_je')">Found a JE</button>
+    <button class="btn" onclick="trackEvent('click_found_a_junior_enterprise')">Found a Junior Enterprise</button>
   </div>
 
   <div class="container" id="contact">
-    <div class="section">
-      <h2>Contact Us</h2>
-      <p>Interested in collaborating, learning more, or joining our network? Reach out to our team.</p>
-      <button class="btn" id="btn-send-email">Send Email</button>
-    </div>
+    <h2>Contact Us</h2>
+    <p>Get in touch for partnerships, questions, or starting a JE.</p>
+    <button class="btn" onclick="trackEvent('click_get_in_touch')">Get in touch</button>
   </div>
 
   <footer>
     <p>© 2025 JE Global - All rights reserved.</p>
   </footer>
-
-<!-- Eventos de Navegação e Botões -->
-<script>
-  // Navegação
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      gtag('event', 'nav_click', {
-        event_category: 'navigation',
-        event_label: link.getAttribute('href')
-      });
-    });
-  });
-
-  // Botões principais
-  document.getElementById('btn-learn-more').addEventListener('click', () => {
-    gtag('event', 'click_learn_more', {
-      event_category: 'engagement',
-      event_label: 'Learn More - Home'
-    });
-  });
-
-  document.getElementById('btn-about-contact').addEventListener('click', () => {
-    gtag('event', 'click_about_contact', {
-      event_category: 'engagement',
-      event_label: 'Contact from About'
-    });
-  });
-
-  document.getElementById('btn-service-consulting').addEventListener('click', () => {
-    gtag('event', 'click_service', {
-      event_category: 'services',
-      event_label: 'Consulting'
-    });
-  });
-
-  document.getElementById('btn-service-workshops').addEventListener('click', () => {
-    gtag('event', 'click_service', {
-      event_category: 'services',
-      event_label: 'Workshops'
-    });
-  });
-
-  document.getElementById('btn-service-networking').addEventListener('click', () => {
-    gtag('event', 'click_service', {
-      event_category: 'services',
-      event_label: 'Networking'
-    });
-  });
-
-  document.getElementById('btn-see-impact').addEventListener('click', () => {
-    gtag('event', 'click_impact', {
-      event_category: 'engagement',
-      event_label: 'See Impact'
-    });
-  });
-
-  document.getElementById('btn-send-email').addEventListener('click', () => {
-    gtag('event', 'click_contact', {
-      event_category: 'contact',
-      event_label: 'Send Email Button'
-    });
-  });
-</script>
-
 </body>
 </html>
-
-
